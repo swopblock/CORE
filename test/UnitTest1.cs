@@ -74,9 +74,15 @@ namespace test
 
             var offer = new Offer(amount, offerUnit, usingUnit, usingAddress);
 
-            //Assert
+            Assert.Equal(" 123", amount.Text);
 
-            Assert.Equal("123SWOBLusingtheBTCaddress0x2947", offer.Text);
+            Assert.Equal(" SWOBL", offerUnit.Text);
+
+            Assert.Equal(" BTC", usingUnit.Text);
+
+            Assert.Equal(" address 0x2947", usingAddress.Text);
+
+            Assert.Equal(" 123 SWOBL using the BTC address 0x2947", offer.Text);
         }
     }
 }

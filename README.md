@@ -6,3 +6,5 @@ Text messaging examples:
 
 Order: I am bidding 10 SWOBL using my BTC address 0xFF in order for buying ETH using the market.
 Invoice: ... to be continued ...
+
+March 3. 2023 Jeff: Adding expiration and signature to the user ordering grammar over at the swopblock/ActionGrammar project. Did add some test offer stuff here.

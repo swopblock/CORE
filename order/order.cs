@@ -96,7 +96,7 @@ public class Address
 
     public Address(string text)
     {
-        Text = " " + " address " + text;
+        Text = " address " + text;
     }
 }
 
