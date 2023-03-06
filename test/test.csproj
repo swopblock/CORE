@@ -22,8 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\change\change.csproj" />
     <ProjectReference Include="..\confirm\confirm.csproj" />
+    <ProjectReference Include="..\deliver\deliver.csproj" />
     <ProjectReference Include="..\invoice\invoice.csproj" />
     <ProjectReference Include="..\order\order.csproj" />
   </ItemGroup>
