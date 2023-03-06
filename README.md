@@ -9,4 +9,4 @@ Invoice: ... to be continued ...
 
 March 3, 2023 Jeff: Adding expiration and signature to the user ordering grammar over at the swopblock/ActionGrammar project. Did add some test offer stuff here.
 
-March 6, 2023 Jeff: Reorganized and flushed out ordering, invoicing, delivering (was changing) and confirming over at the swopblock/ActionGrammar project.
+March 6, 2023 Jeff: Reorganized and flushed out ordering, invoicing, delivering (was changing (added deliver project and deleted change project) and confirming over at the swopblock/ActionGrammar project.
