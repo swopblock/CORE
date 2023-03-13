@@ -1,4 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿//Copyright (c) 2023 Swopblock
+
 using System.Linq.Expressions;
 
 Console.WriteLine("Hello, Swopblock Core Ordering World!");
