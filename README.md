@@ -14,3 +14,5 @@ March 6, 2023 Jeff: Reorganized and flushed out ordering, invoicing, delivering 
 March 13, 2023 Jeff: Working on 20+ classes to represent the the order, invoice, delivery and confirmation messages.
 
 March 14, 2023 Jeff: Expanded the confirmation message to include market account and inventory information.
+
+March 17, 2023 Jeff: Renaming projects to Swop-Script and CORE and continuing to add tests to Swop-Script
