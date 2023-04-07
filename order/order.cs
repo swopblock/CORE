@@ -1,6 +1,7 @@
 ﻿//Copyright (c) 2023 Swopblock
 
 using System.Linq.Expressions;
+using System.Reflection.Metadata.Ecma335;
 
 //Console.WriteLine("Hello, Swopblock Core Ordering World!");
 
@@ -10,143 +11,162 @@ using System.Linq.Expressions;
 
 //Invoice Invoice= new Invoice();
 
-public class OrderModel
+namespace Swopblock
 {
-    TextWriter Writer;
+    public interface IOffer { new IOfferable Make(); }
 
-    TextReader Reader;
+    public partial interface IOfferable { IOfferNetworkable Make(); }
 
-    public OrderModel()
+    public partial interface IOfferNetworkable { IInvoiceable Make(); }
+
+    public partial interface IInvoiceable { IInvoice Make(); }
+
+    public partial interface IInvoice { IDeliverable Make(); }
+
+    public partial interface IDeliverable { IDeliveryNetworkable Make(); }
+
+    public partial interface IDeliveryNetworkable { IReceiptable Make(); }
+
+    public partial interface IReceiptable { IOffer Make(); }
+}
+    public class OrderModel
     {
+        TextWriter Writer;
 
-    }
+        TextReader Reader;
 
-    public OrderModel(TextWriter writer, TextReader reader)
-    {
-        Writer = writer;
-
-        Reader = reader;
-    }
-
-    public void ProcessOrders()
-    {
-        string message;
-
-        while ((message = Reader.ReadLine()) != null)
+        public OrderModel()
         {
-            message = ProcessOrder(message);
 
-            Writer.WriteLine(message);
+        }
+
+        public OrderModel(TextWriter writer, TextReader reader)
+        {
+            Writer = writer;
+
+            Reader = reader;
+        }
+
+        public void ProcessOrders()
+        {
+            string message;
+
+            while ((message = Reader.ReadLine()) != null)
+            {
+                message = ProcessOrder(message);
+
+                Writer.WriteLine(message);
+            }
+        }
+
+        public string ProcessOrder(string line)
+        {
+            return null;
+        }
+
+        public void OrderSynthesizing()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Writer.WriteLine("I am");
+            }
         }
     }
 
-    public string ProcessOrder(string line) 
+    public class Offer
     {
-        return null;
-    }
+        public Amount Amount { get; init; }
 
-    public void OrderSynthesizing()
-    {
-        for (int i = 0; i < 10; i++)
+        public Unit OfferUnit { get; init; }
+
+        public Unit UsingUnit { get; init; }
+
+        public Address Address { get; init; }
+
+        public string Text { get; init; }
+
+        public Offer(Amount amount, Unit offerUnit, Unit usingUnit, Address address)
         {
-            Writer.WriteLine("I am");
+            Amount = amount;
+            OfferUnit = offerUnit;
+            UsingUnit = usingUnit;
+            Address = address;
+
+            Text = Amount.Text + OfferUnit.Text + " using the" + UsingUnit.Text + Address.Text;
         }
     }
-}
 
-public class Offer
-{
-    public Amount Amount { get; init; }
-
-    public Unit OfferUnit { get; init; }    
-
-    public Unit UsingUnit { get; init; }
-
-    public Address Address { get; init; }
-
-    public string Text { get; init; }
-
-    public Offer(Amount amount, Unit offerUnit, Unit usingUnit, Address address)
+    public class Amount
     {
-        Amount = amount;
-        OfferUnit = offerUnit;
-        UsingUnit = usingUnit;
-        Address = address;
+        public decimal AtMost { get; init; }
 
-        Text = Amount.Text + OfferUnit.Text + " using the" + UsingUnit.Text + Address.Text;
+        public string Text { get; init; }
+
+        public Amount(decimal atMost)
+        {
+            AtMost = atMost;
+
+            Text = " " + AtMost.ToString();
+        }
     }
-}
 
-public class Amount
-{
-    public decimal AtMost { get; init; }
-
-    public string Text { get; init; }
-
-    public Amount(decimal atMost)
+    public class Address
     {
-        AtMost = atMost;
+        public string Text { get; init; }
 
-        Text = " " + AtMost.ToString();
+        public Address(string text)
+        {
+            Text = " address " + text;
+        }
     }
-}
 
-public class Address
-{
-    public string Text { get; init; }
-
-    public Address(string text)
+    public class Order
     {
-        Text = " address " + text;
+        public Unit Unit { get; init; }
+        public string Text { get; init; }
+
+        public Order(Unit unit)
+        {
+            Unit = unit;
+
+            Text = Unit.Text + " using the market.";
+        }
     }
-}
 
-public class Order
-{
-    public Unit Unit { get; init; }
-    public string Text { get; init; }
-
-    public Order(Unit unit) 
+    public abstract class Unit
     {
-        Unit = unit;
-
-        Text = Unit.Text + " using the market.";
+        public string Text { get; init; }
     }
-}
 
-public abstract class Unit
-{
-    public string Text { get; init; }
-}
-
-public class BTC : Unit
-{
-    public BTC()
+    public class BTC : Unit
     {
-        Text = " BTC";
+        public BTC()
+        {
+            Text = " BTC";
+        }
     }
-}
 
-public class ETH : Unit
-{
-    public ETH()
+    public class ETH : Unit
     {
-        Text = " ETH";
+        public ETH()
+        {
+            Text = " ETH";
+        }
     }
-}
 
-public class USD : Unit
-{
-    public USD()
+    public class USD : Unit
     {
-        Text = " USD";
+        public USD()
+        {
+            Text = " USD";
+        }
     }
-}
 
-public class SWOBL : Unit
-{
-    public SWOBL()
+    public class SWOBL : Unit
     {
-        Text = " SWOBL";
+        public SWOBL()
+        {
+            Text = " SWOBL";
+        }
     }
-}
+
