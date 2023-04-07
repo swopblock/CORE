@@ -6,6 +6,27 @@ using System.Threading.Tasks;
 
 namespace offer
 {
+    namespace Order
+    {
+
+        public enum UserStates
+        {
+            Offerable,
+            Networkable,
+            Invoiceable
+        }
+
+        public enum AutoStates
+        {
+            Invoiceable,
+            Deliverable,
+            Networkable,
+            Receiptable,
+            Offerable
+        }
+    }
+
+    //public enum 
    //public interface IConstructable
    // {
    //     IConstructing New(IConstructable order);

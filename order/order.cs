@@ -2,13 +2,13 @@
 
 using System.Linq.Expressions;
 
-Console.WriteLine("Hello, Swopblock Core Ordering World!");
+//Console.WriteLine("Hello, Swopblock Core Ordering World!");
 
-var orderModel = new OrderModel(Console.Out, Console.In);
+//var orderModel = new OrderModel(Console.Out, Console.In);
 
-orderModel.ProcessOrders();
+//orderModel.ProcessOrders();
 
-Invoice Invoice= new Invoice();
+//Invoice Invoice= new Invoice();
 
 public class OrderModel
 {
