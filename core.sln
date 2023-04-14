@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "order", "order\order.csproj", "{24D3029A-A10A-4892-BFCF-EEF9870585BD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "invoice", "invoice\invoice.csproj", "{50E1058A-7057-4DE4-9F8E-AED8979021D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoicers", "Invoicers\Invoicers.csproj", "{50E1058A-7057-4DE4-9F8E-AED8979021D6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "confirm", "confirm\confirm.csproj", "{FA0C7F3C-DBD4-4C11-A0BB-7AEEFFD1549C}"
 EndProject
