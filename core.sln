@@ -27,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "autonet", "autonet\autonet.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users", "Users\Users.csproj", "{CB0432F0-57DC-44EF-AA9B-7780AD8CBA4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "auto", "auto\auto.csproj", "{284A1823-68E2-4D42-A0F0-1907E4651F53}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autos", "Autos\Autos.csproj", "{284A1823-68E2-4D42-A0F0-1907E4651F53}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "receipt", "receipt\receipt.csproj", "{F5A36C26-4654-4E40-B773-2D42E43EE72F}"
 EndProject
