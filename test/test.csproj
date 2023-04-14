@@ -21,11 +21,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\confirm\confirm.csproj" />
-    <ProjectReference Include="..\deliver\deliver.csproj" />
-    <ProjectReference Include="..\invoice\invoice.csproj" />
-    <ProjectReference Include="..\order\order.csproj" />
-  </ItemGroup>
-
 </Project>
