@@ -16,3 +16,5 @@ March 13, 2023 Jeff: Working on 20+ classes to represent the the order, invoice,
 March 14, 2023 Jeff: Expanded the confirmation message to include market account and inventory information.
 
 March 17, 2023 Jeff: Renaming projects to Swop-Script and CORE and continuing to add tests to Swop-Script
+
+April 14, 2023 Jeff: Top level restructuring: Users, Invoicers, Autos and Receipters are the top level processors. Orders is the kind of messages there are, the messages being: Offers, Invoices, Deliveries and Receipts.  
