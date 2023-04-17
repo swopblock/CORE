@@ -2,26 +2,52 @@
 
 SUBJECTS
 
-"Users" Bid Money or Ask Money to make Offers of exchange Orders between Buyers and Sellers.
+"Subjects" is an abstraction of Users, Invoicers, Autos and Receipters.
 
-"Invoicers" Match Offers to make Invoices of exchange between Buyers and Sellers.
+"Incenters" is an abstraction of Invoicers and Receipters that focuses on the incentives of Ordering.
 
-"Autos" Fill Invoices to make Deliveries of exchange between Buyers and Sellers.
+"Consenters" is a division of Incenters that focuses on the consensus of Ordering.
 
-"Receipters" Confirm Deliveries of exchange between Buyers and Sellers.
+"Users" Bid Money and Ask Money to make Offers of exchange Orders between Buyers and Sellers.
+
+"Invoicers" Match Offers to make Invoices of exchange Orders between Buyers and Sellers.
+
+"Autos" Fill Invoices to make Deliveries of exchange Orders between Buyers and Sellers.
+
+"Receipters" Confirm Deliveries of exchange Orders between Buyers and Sellers.
 
 VERBS
 
-"Bid" is an offer by a Users to Buy an Asset from another User in exchange for Money.
+"Bidding" is executed by Users to make an Offer with Money in order to Buy an Asset from another User.
 
-"Ask" is an Offer by a User to Sell an Asset to another User in exchange for Money.
+"Asking" is executed by Users to make an Offer with Assets in order to Sell an Asset to another User.
 
-"Buy" is an Invoice between a Buyer
+"Buying" is executed by Invoicers to make an Invoice with a Bid and a matching Ask.
+
+"Selling" is executed by Invoicers to make an Invoice with an Ask and a matching Bid.
+
+"Paying" is executed by Autos as a Buyer to accept a Delivery of Assets from a Seller and make a Delivery of Money to the Seller.
+
+"Cashing" is executed by Autos as a Seller to make a Delivery of Assets to a Buyer and accept a Delivery of Money from the Buyer.
+
+"Expensing" is executed by Receipters to make a Reciept to confirm to the Buyer that the Invoice is settled.
+
+"Incoming" is executed by Receipters to make a Receipt to confirm to the Seller that the Invoice is settled.
+
+"Texting" is executed by Users to send Offer Texts to Invoicers, is executed by Invoicers to send Invoice Texts to Autos, is executed by Autos to send Delivery Texts to Receipters and is executed by Receipters to send Receipt Texts to Users.
+
+"Signaling" is executed just like Texting except Signals are sent instead of Texts. 
+
+"Parsing" is executed to deserialize a Text or a Signal back into it's original object.
 
 
 OBJECTS
 
 An "Order" is the set of people, actions, assets and money that result in the giving up of one person's assets in exchange for receiving another person's assets. Each Order starts empty and progressively becomes, first an Offer, then an Invoice, next a Delivery and finally a Receipt to result in the completion and the confirmation of the exchange. 
+
+A "Text" is an expression of an Order serialized into a string of characters that form a sentence of English words.
+
+A "Signal" is an expression of an Order serialized into a string of bits that form a sequence of binary enumerations, indexes and numbers. 
 
 A "Buy" is a kind of Order where the Offer is a bid of money in order to buy an asset in exchange for the money.
 
