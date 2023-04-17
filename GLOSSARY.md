@@ -2,7 +2,7 @@
 
 SUBJECTS
 
-"Users" Bid Money or Ask Money to make Offers of exchange between Buyers and Sellers.
+"Users" Bid Money or Ask Money to make Offers of exchange Orders between Buyers and Sellers.
 
 "Invoicers" Match Offers to make Invoices of exchange between Buyers and Sellers.
 
