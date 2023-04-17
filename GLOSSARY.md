@@ -1,10 +1,27 @@
-Glossary
+#Glossary
 
-Orders is a kind of Order
+SUBJECTS
 
-Orderers is an abstrction of Users, Invoicers, Autos and Receipters.
+"Users" Bid Money or Ask Money to make Offers of exchange between Buyers and Sellers.
 
-An "Order" is the set of people, actions, assets and money that result in the giving up of one person's assets in exchange for receiving another person's assets. Each Order starts empty and progressively becomes, first an Offer, then an Invoice, next a Delivery and finally a Receipt to result in the completion of the exchange. 
+"Invoicers" Match Offers to make Invoices of exchange between Buyers and Sellers.
+
+"Autos" Fill Invoices to make Deliveries of exchange between Buyers and Sellers.
+
+"Receipters" Confirm Deliveries of exchange between Buyers and Sellers.
+
+VERBS
+
+"Bid" is an offer by a Users to Buy an Asset from another User in exchange for Money.
+
+"Ask" is an Offer by a User to Sell an Asset to another User in exchange for Money.
+
+"Buy" is an Invoice between a Buyer
+
+
+OBJECTS
+
+An "Order" is the set of people, actions, assets and money that result in the giving up of one person's assets in exchange for receiving another person's assets. Each Order starts empty and progressively becomes, first an Offer, then an Invoice, next a Delivery and finally a Receipt to result in the completion and the confirmation of the exchange. 
 
 A "Buy" is a kind of Order where the Offer is a bid of money in order to buy an asset in exchange for the money.
 
@@ -14,7 +31,7 @@ An "Asset" is a valuable that is committable and transferable using a blockchain
 
 "Money" is a medium of value that is committable and transferable concurrently with the transfer of an Asset.
 
-An "Offer" is a making of committments of either Money or Assets in either a Bid or an Ask (respectively), the Bid being a offering of Money bidding for Assets, the Ask being an offering of Assets asking for Money.
+An "Offer" is a bidding or asking as a committment of Money or Assets (respectively), the bidding being a offering of Money in exchange for Assets, the asking being an offering of Assets in exchange for Money.
 
 An "Invoice" is a matching of committments made in Offers and is a pair of matched Bid and Ask Offers such that the amount of Money being bid is exactly equal to the amount of Money being asked and is a confirmation that an Order has been made executable.
 
