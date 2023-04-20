@@ -70,3 +70,5 @@ An "Invoice" is a matching of committments made in Offers and is a pair of match
 A "Delivery" is a fulfiling of committments matched in Invoices and is a concurrent cross-chain delivery of the money and same-chain delivery of the asset, the money and the asset that has been paired in the Bid and Ask twin Offers of an Invoice.
 
 A "Receipt" is a confirming of the committments fulfilled in Deliveries.
+
+A "Log" is a storage for Orders.
